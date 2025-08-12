@@ -24,5 +24,5 @@
 
    "license": "LICENSE.txt",
   "readme": "README.md",
-  "manifest": "https://github.com/Fumble-Neo/DirtySystem-V13-V2/blob/main/system.json",
+  "manifest": "https://raw.githubusercontent.com/Fumble-Neo/DirtySystem-V13-V2/main/system.json",
   "download": "https://github.com/Fumble-Neo/DirtySystemV13-V2/archive/refs/heads/main.zip"

@@ -22,11 +22,7 @@
   ],
   "packs": [],
 
-  "license": "LICENSE.txt",
+   "license": "LICENSE.txt",
   "readme": "README.md",
-
-  "url": "https://github.com/Fumble-Neo/DirtySystem-V13-V2",
-  "manifest": "https://github.com/Fumble-Neo/DirtySystem-V13-V2/releases/latest/download/system.json",
-  "download": "https://github.com/Fumble-Neo/DirtySystem-V13-V2/releases/download/v1.1.5/dirty-system-v1.1.5.zip",
-  "changelog": "https://github.com/Fumble-Neo/DirtySystem-V13-V2/releases/tag/v1.1.5"
-}
+  "manifest": "https://github.com/Fumble-Neo/DirtySystem-V13-V2/blob/main/system.json",
+  "download": "https://github.com/Fumble-Neo/DirtySystemV13-V2/archive/refs/heads/main.zip"

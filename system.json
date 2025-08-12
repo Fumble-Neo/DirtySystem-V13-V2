@@ -1,32 +1,24 @@
 {
   "id": "dirty-system",
-  "name": "dirty-system",
   "title": "Dirty System",
-  "type": "system",
-  "description": "Le Dirty System du Dirty Clean Crew enfin sur Foundry !",
-  "version": "1.0.0",
-
+  "description": "Dirty System — chat cards stylées, bonus/malus, blessures persistantes.",
+  "version": "1.1.5",
   "compatibility": {
     "minimum": "10",
     "verified": "13"
   },
-  "compatibleCoreVersion": "13",
-
   "authors": [
     {
       "name": "Neo",
       "url": "https://x.com/FumbleAcademy"
     }
   ],
-
   "esmodules": [
-    "module.js"
+    "system/main.js"
   ],
-
   "styles": [
-    "styles/styles.css"
+    "styles/index.css"
   ],
-
   "languages": [
     {
       "lang": "en",
@@ -34,12 +26,10 @@
       "path": "lang/en.json"
     }
   ],
-
   "packs": [],
-  "system": {},
-
   "license": "LICENSE.txt",
   "readme": "README.md",
+  "url": "https://github.com/Fumble-Neo/DirtySystem-V13-V2",
   "manifest": "https://raw.githubusercontent.com/Fumble-Neo/DirtySystem-V13-V2/main/system.json",
   "download": "https://github.com/Fumble-Neo/DirtySystem-V13-V2/archive/refs/heads/main.zip"
 }

@@ -1,7 +1,7 @@
 {
   "id": "dirty-system",
   "title": "Dirty System",
-  "description": "Dirty System — chat cards stylées, bonus/malus, blessures persistantes.",
+  "description": "Dirty System",
   "version": "1.1.5",
   "compatibility": { "minimum": "10", "verified": "13" },
   "authors": [{ "name": "Neo", "url": "https://x.com/FumbleAcademy" }],

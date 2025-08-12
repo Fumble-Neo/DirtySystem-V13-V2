@@ -1,0 +1,79 @@
+{
+  "Actor": {
+    "types": [
+      "character"
+    ],
+    "templates": {},
+    "character": {
+      "profil": "",
+      "style": "",
+      "attache": "",
+      "ongletNotes": "",
+      "possessionsNotes": "",
+      "custom": {
+        "affronter": 0,
+        "endurer": 0,
+        "franchir": 0,
+        "connaitre": 0,
+        "raisonner": 0,
+        "utiliser": 0,
+        "influencer": 0,
+        "percevoir": 0,
+        "ressentir": 0,
+        "engagementContact": 0,
+        "engagementDistance": 0,
+        "reserveProfil": 0
+      },
+      "memo": {
+        "affronter": 0,
+        "endurer": 0,
+        "franchir": 0,
+        "connaitre": 0,
+        "raisonner": 0,
+        "utiliser": 0,
+        "influencer": 0,
+        "percevoir": 0,
+        "ressentir": 0,
+        "engagementContact": 0,
+        "engagementDistance": 0,
+        "reserveProfil": 0
+      }
+    }
+  },
+  "Item": {
+    "types": [
+      "weapon",
+      "armor",
+      "gear"
+    ],
+    "templates": {},
+    "weapon": {
+      "img": "icons/svg/sword.svg",
+      "name": "Nouvelle arme",
+      "system": {
+        "bonus": 0,
+        "poids": 0,
+        "competence": "Tir",
+        "equipped": false
+      }
+    },
+    "armor": {
+      "img": "icons/svg/shield.svg",
+      "name": "Nouvelle armure",
+      "system": {
+        "protection": 0,
+        "penalite": 0,
+        "equipped": false
+      }
+    },
+    "gear": {
+      "img": "icons/svg/upgrade.svg",
+      "name": "Nouvel équipement",
+      "system": {
+        "poids": 0,
+        "bonus": 0,
+        "equipped": false
+      }
+    }
+  }
+}

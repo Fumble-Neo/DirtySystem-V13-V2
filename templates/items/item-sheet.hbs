@@ -1,0 +1,25 @@
+
+<form class="dirty-item-sheet" autocomplete="off">
+  <header class="flexrow" style="gap:10px;align-items:center;">
+    <img src="{{item.img}}" data-edit="img" width="64" height="64"/>
+    <input type="text" name="name" value="{{item.name}}" style="flex:1;height:28px;"/>
+  </header>
+  <section class="content" style="margin-top:10px;">
+    {{#if (eq item.type "weapon")}}
+      <div class="form-group"><label>Bonus</label><input type="number" name="system.bonus" value="{{system.bonus}}"/></div>
+      <div class="form-group"><label>Poids</label><input type="number" name="system.poids" value="{{system.poids}}"/></div>
+      <div class="form-group"><label>Compétence</label><input type="text" name="system.competence" value="{{system.competence}}"/></div>
+      <div class="form-group"><label>Équipée</label><input type="checkbox" name="system.equipped" {{checked system.equipped}}/></div>
+    {{/if}}
+    {{#if (eq item.type "armor")}}
+      <div class="form-group"><label>Protection</label><input type="number" name="system.protection" value="{{system.protection}}"/></div>
+      <div class="form-group"><label>Pénalité</label><input type="number" name="system.penalite" value="{{system.penalite}}"/></div>
+      <div class="form-group"><label>Équipée</label><input type="checkbox" name="system.equipped" {{checked system.equipped}}/></div>
+    {{/if}}
+    {{#if (eq item.type "gear")}}
+      <div class="form-group"><label>Poids</label><input type="number" name="system.poids" value="{{system.poids}}"/></div>
+      <div class="form-group"><label>Bonus</label><input type="number" name="system.bonus" value="{{system.bonus}}"/></div>
+      <div class="form-group"><label>Équipé</label><input type="checkbox" name="system.equipped" {{checked system.equipped}}/></div>
+    {{/if}}
+  </section>
+</form>

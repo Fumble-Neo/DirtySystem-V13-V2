@@ -1,0 +1,160 @@
+
+<form class="character-sheet flexcol" autocomplete="off">
+  <header class="header-grid">
+  <div class="portrait-container">
+    <img class="portrait-image" src="{{actor.img}}" alt="{{actor.name}}" />
+  </div>
+  <div class="id-fields">
+    <div class="field"><label>Profil</label><input type="text" name="system.profil" value="{{system.profil}}"/></div>
+    <div class="field"><label>Style</label><input type="text" name="system.style" value="{{system.style}}"/></div>
+    <div class="field"><label>Attache</label><input type="text" name="system.attache" value="{{system.attache}}"/></div>
+  </div>
+</header>
+
+<section class="bonus-row">
+  <div class="bonus-card">
+    <div class="chip-grid bonuses">
+      <label class="chip"><input type="checkbox" class="bonus-checkbox" data-modifier="+2"> +2 Profil</label>
+      <label class="chip"><input type="checkbox" class="bonus-checkbox" data-modifier="+1"> +1 Profil</label>
+      <label class="chip"><input type="checkbox" class="bonus-checkbox" data-modifier="+1"> +1 Lien</label>
+      <label class="chip"><input type="checkbox" class="bonus-checkbox" data-modifier="+1"> +1 Capacité secondaire</label>
+      <label class="chip"><input type="checkbox" class="bonus-checkbox" data-modifier="-1"> Malus MJ -1</label>
+      <label class="chip"><input type="checkbox" class="bonus-checkbox" data-modifier="-2"> Malus MJ -2</label>
+    </div>
+    <div class="bonus-controls">
+      <div class="gauge">Malus actuel&nbsp;<span class="penalty-value">0</span></div>
+      <button id="clear-penalty" type="button" class="chip action small">Retirer les malus</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <nav class="tabs" data-group="primary">
+    <a class="item" data-tab="skills">Compétences</a>
+    <a class="item" data-tab="blessures">Blessures</a>
+    <a class="item" data-tab="historique">Historique</a>
+    <a class="item" data-tab="possessions">Possessions</a>
+  </nav>
+
+  <section class="tab-panels">
+    <div class="tab" data-group="primary" data-tab="skills">
+      <div class="stat-block">
+        <!-- 12 stats -->
+        <div class="stat-item" data-attr="affronter"><div class="stat-name">AFFRONTER</div><div class="stat-values-container"><input id="custom-affronter" name="system.custom.affronter" type="number" value="{{system.custom.affronter}}" class="stat-value"/><input id="memo-affronter" name="system.memo.affronter" type="number" value="{{system.memo.affronter}}" class="stat-memo"/><div class="stat-controls"><button type="button" class="memo-increase" data-target="memo-affronter">▲</button><button type="button" class="memo-decrease" data-target="memo-affronter">▼</button></div></div></div>
+        <div class="stat-item" data-attr="endurer"><div class="stat-name">ENDURER</div><div class="stat-values-container"><input id="custom-endurer" name="system.custom.endurer" type="number" value="{{system.custom.endurer}}" class="stat-value"/><input id="memo-endurer" name="system.memo.endurer" type="number" value="{{system.memo.endurer}}" class="stat-memo"/><div class="stat-controls"><button type="button" class="memo-increase" data-target="memo-endurer">▲</button><button type="button" class="memo-decrease" data-target="memo-endurer">▼</button></div></div></div>
+        <div class="stat-item" data-attr="franchir"><div class="stat-name">FRANCHIR</div><div class="stat-values-container"><input id="custom-franchir" name="system.custom.franchir" type="number" value="{{system.custom.franchir}}" class="stat-value"/><input id="memo-franchir" name="system.memo.franchir" type="number" value="{{system.memo.franchir}}" class="stat-memo"/><div class="stat-controls"><button type="button" class="memo-increase" data-target="memo-franchir">▲</button><button type="button" class="memo-decrease" data-target="memo-franchir">▼</button></div></div></div>
+        <div class="stat-item" data-attr="connaitre"><div class="stat-name">CONNAÎTRE</div><div class="stat-values-container"><input id="custom-connaitre" name="system.custom.connaitre" type="number" value="{{system.custom.connaitre}}" class="stat-value"/><input id="memo-connaitre" name="system.memo.connaitre" type="number" value="{{system.memo.connaitre}}" class="stat-memo"/><div class="stat-controls"><button type="button" class="memo-increase" data-target="memo-connaitre">▲</button><button type="button" class="memo-decrease" data-target="memo-connaitre">▼</button></div></div></div>
+        <div class="stat-item" data-attr="raisonner"><div class="stat-name">RAISONNER</div><div class="stat-values-container"><input id="custom-raisonner" name="system.custom.raisonner" type="number" value="{{system.custom.raisonner}}" class="stat-value"/><input id="memo-raisonner" name="system.memo.raisonner" type="number" value="{{system.memo.raisonner}}" class="stat-memo"/><div class="stat-controls"><button type="button" class="memo-increase" data-target="memo-raisonner">▲</button><button type="button" class="memo-decrease" data-target="memo-raisonner">▼</button></div></div></div>
+        <div class="stat-item" data-attr="utiliser"><div class="stat-name">UTILISER</div><div class="stat-values-container"><input id="custom-utiliser" name="system.custom.utiliser" type="number" value="{{system.custom.utiliser}}" class="stat-value"/><input id="memo-utiliser" name="system.memo.utiliser" type="number" value="{{system.memo.utiliser}}" class="stat-memo"/><div class="stat-controls"><button type="button" class="memo-increase" data-target="memo-utiliser">▲</button><button type="button" class="memo-decrease" data-target="memo-utiliser">▼</button></div></div></div>
+        <div class="stat-item" data-attr="influencer"><div class="stat-name">INFLUENCER</div><div class="stat-values-container"><input id="custom-influencer" name="system.custom.influencer" type="number" value="{{system.custom.influencer}}" class="stat-value"/><input id="memo-influencer" name="system.memo.influencer" type="number" value="{{system.memo.influencer}}" class="stat-memo"/><div class="stat-controls"><button type="button" class="memo-increase" data-target="memo-influencer">▲</button><button type="button" class="memo-decrease" data-target="memo-influencer">▼</button></div></div></div>
+        <div class="stat-item" data-attr="percevoir"><div class="stat-name">PERCEVOIR</div><div class="stat-values-container"><input id="custom-percevoir" name="system.custom.percevoir" type="number" value="{{system.custom.percevoir}}" class="stat-value"/><input id="memo-percevoir" name="system.memo.percevoir" type="number" value="{{system.memo.percevoir}}" class="stat-memo"/><div class="stat-controls"><button type="button" class="memo-increase" data-target="memo-percevoir">▲</button><button type="button" class="memo-decrease" data-target="memo-percevoir">▼</button></div></div></div>
+        <div class="stat-item" data-attr="ressentir"><div class="stat-name">RESSENTIR</div><div class="stat-values-container"><input id="custom-ressentir" name="system.custom.ressentir" type="number" value="{{system.custom.ressentir}}" class="stat-value"/><input id="memo-ressentir" name="system.memo.ressentir" type="number" value="{{system.memo.ressentir}}" class="stat-memo"/><div class="stat-controls"><button type="button" class="memo-increase" data-target="memo-ressentir">▲</button><button type="button" class="memo-decrease" data-target="memo-ressentir">▼</button></div></div></div>
+        <div class="stat-item" data-attr="engagementContact"><div class="stat-name">ENGAGEMENT AU CONTACT</div><div class="stat-values-container"><input id="custom-engagementContact" name="system.custom.engagementContact" type="number" value="{{system.custom.engagementContact}}" class="stat-value"/><input id="memo-engagementContact" name="system.memo.engagementContact" type="number" value="{{system.memo.engagementContact}}" class="stat-memo"/><div class="stat-controls"><button type="button" class="memo-increase" data-target="memo-engagementContact">▲</button><button type="button" class="memo-decrease" data-target="memo-engagementContact">▼</button></div></div></div>
+        <div class="stat-item" data-attr="engagementDistance"><div class="stat-name">ENGAGEMENT À DISTANCE</div><div class="stat-values-container"><input id="custom-engagementDistance" name="system.custom.engagementDistance" type="number" value="{{system.custom.engagementDistance}}" class="stat-value"/><input id="memo-engagementDistance" name="system.memo.engagementDistance" type="number" value="{{system.memo.engagementDistance}}" class="stat-memo"/><div class="stat-controls"><button type="button" class="memo-increase" data-target="memo-engagementDistance">▲</button><button type="button" class="memo-decrease" data-target="memo-engagementDistance">▼</button></div></div></div>
+        <div class="stat-item" data-attr="reserveProfil"><div class="stat-name">RÉSERVE DE PROFIL</div><div class="stat-values-container"><input id="custom-reserveProfil" name="system.custom.reserveProfil" type="number" value="{{system.custom.reserveProfil}}" class="stat-value"/><input id="memo-reserveProfil" name="system.memo.reserveProfil" type="number" value="{{system.memo.reserveProfil}}" class="stat-memo"/><div class="stat-controls"><button type="button" class="memo-increase" data-target="memo-reserveProfil">▲</button><button type="button" class="memo-decrease" data-target="memo-reserveProfil">▼</button></div></div></div>
+      </div>
+    </div>
+
+    <div class="tab" data-group="primary" data-tab="blessures">
+      <div class="blessure-effroi-container">
+        <div class="blessure-section">
+          <div class="stat-name">BLESSURE</div>
+          <button id="roll-blessure" type="button">Lancer</button>
+        </div>
+        <div class="effroi-section">
+          <div class="stat-name">EFFROI</div>
+          <button id="roll-effroi" type="button">Lancer</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab" data-group="primary" data-tab="historique">
+      <textarea class="notes" name="system.ongletNotes" rows="10">{{system.ongletNotes}}</textarea>
+    </div>
+
+    
+<div class="tab" data-group="primary" data-tab="possessions">
+  <section class="inventory">
+    <header class="inv-header">
+      <h3>Armes</h3>
+      <div class="actions"><a class="item-create" data-type="weapon"><i class="fas fa-plus"></i> Ajouter</a></div>
+    </header>
+    <table class="inv-table">
+      <thead><tr><th>Icône</th><th>Nom</th><th>Bonus</th><th>Poids</th><th>Compétence</th><th>Équipée</th><th>Actions</th></tr></thead>
+      <tbody>
+      {{#each actor.items as |it|}}
+        {{#if (eq it.type "weapon")}}
+          <tr data-item-id="{{it.id}}">
+            <td class="icon"><img src="{{it.img}}" width="24" height="24"/></td>
+            <td class="name">{{it.name}}</td>
+            <td class="num">{{it.system.bonus}}</td>
+            <td class="num">{{it.system.poids}}</td>
+            <td>{{it.system.competence}}</td>
+            <td class="center"><input type="checkbox" class="item-equip" {{checked it.system.equipped}}/></td>
+            <td class="row-actions">
+              <a class="item-edit"><i class="fas fa-edit"></i></a>
+              <a class="item-delete"><i class="fas fa-trash"></i></a>
+            </td>
+          </tr>
+        {{/if}}
+      {{/each}}
+      </tbody>
+    </table>
+
+    <header class="inv-header">
+      <h3>Armure</h3>
+      <div class="actions"><a class="item-create" data-type="armor"><i class="fas fa-plus"></i> Ajouter</a></div>
+    </header>
+    <table class="inv-table">
+      <thead><tr><th>Icône</th><th>Nom</th><th>Protection</th><th>Pénalité</th><th>Équipée</th><th>Actions</th></tr></thead>
+      <tbody>
+      {{#each actor.items as |it|}}
+        {{#if (eq it.type "armor")}}
+          <tr data-item-id="{{it.id}}">
+            <td class="icon"><img src="{{it.img}}" width="24" height="24"/></td>
+            <td class="name">{{it.name}}</td>
+            <td class="num">{{it.system.protection}}</td>
+            <td class="num">{{it.system.penalite}}</td>
+            <td class="center"><input type="checkbox" class="item-equip" {{checked it.system.equipped}}/></td>
+            <td class="row-actions">
+              <a class="item-edit"><i class="fas fa-edit"></i></a>
+              <a class="item-delete"><i class="fas fa-trash"></i></a>
+            </td>
+          </tr>
+        {{/if}}
+      {{/each}}
+      </tbody>
+    </table>
+
+    <header class="inv-header">
+      <h3>Équipement</h3>
+      <div class="actions"><a class="item-create" data-type="gear"><i class="fas fa-plus"></i> Ajouter</a></div>
+    </header>
+    <table class="inv-table">
+      <thead><tr><th>Icône</th><th>Nom</th><th>Poids</th><th>Bonus</th><th>Équipé</th><th>Actions</th></tr></thead>
+      <tbody>
+      {{#each actor.items as |it|}}
+        {{#if (eq it.type "gear")}}
+          <tr data-item-id="{{it.id}}">
+            <td class="icon"><img src="{{it.img}}" width="24" height="24"/></td>
+            <td class="name">{{it.name}}</td>
+            <td class="num">{{it.system.poids}}</td>
+            <td class="num">{{it.system.bonus}}</td>
+            <td class="center"><input type="checkbox" class="item-equip" {{checked it.system.equipped}}/></td>
+            <td class="row-actions">
+              <a class="item-edit"><i class="fas fa-edit"></i></a>
+              <a class="item-delete"><i class="fas fa-trash"></i></a>
+            </td>
+          </tr>
+        {{/if}}
+      {{/each}}
+      </tbody>
+    </table>
+  </section>
+</div>
+
+  </section>
+</form>

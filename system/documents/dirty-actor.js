@@ -1,0 +1,1 @@
+export class DirtyActor extends Actor { prepareData(){ super.prepareData(); } }

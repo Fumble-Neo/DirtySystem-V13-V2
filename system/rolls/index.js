@@ -1,0 +1,1 @@
+export const tensionFromD6 = n => ({1:-2,2:-1,3:0,4:0,5:+1,6:+2})[n]; export async function rollD(formula){ const r=new Roll(formula); await r.evaluate(); return r; }

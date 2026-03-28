@@ -37,6 +37,14 @@
         "engagementContact": 0,
         "engagementDistance": 0,
         "reserveProfil": 0
+      },
+      "bonusToggles": {
+        "profil2": false,
+        "profil1": false,
+        "lien1": false,
+        "capaciteSecondaire1": false,
+        "malusMj1": false,
+        "malusMj2": false
       }
     }
   },

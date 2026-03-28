@@ -14,12 +14,12 @@
 <section class="bonus-row">
   <div class="bonus-card">
     <div class="chip-grid bonuses">
-      <label class="chip"><input type="checkbox" class="bonus-checkbox" data-modifier="+2"> +2 Profil</label>
-      <label class="chip"><input type="checkbox" class="bonus-checkbox" data-modifier="+1"> +1 Profil</label>
-      <label class="chip"><input type="checkbox" class="bonus-checkbox" data-modifier="+1"> +1 Lien</label>
-      <label class="chip"><input type="checkbox" class="bonus-checkbox" data-modifier="+1"> +1 Capacité secondaire</label>
-      <label class="chip"><input type="checkbox" class="bonus-checkbox" data-modifier="-1"> Malus MJ -1</label>
-      <label class="chip"><input type="checkbox" class="bonus-checkbox" data-modifier="-2"> Malus MJ -2</label>
+      <label class="chip"><input type="checkbox" class="bonus-checkbox" name="system.bonusToggles.profil2" data-modifier="+2" {{checked system.bonusToggles.profil2}}> +2 Profil</label>
+      <label class="chip"><input type="checkbox" class="bonus-checkbox" name="system.bonusToggles.profil1" data-modifier="+1" {{checked system.bonusToggles.profil1}}> +1 Profil</label>
+      <label class="chip"><input type="checkbox" class="bonus-checkbox" name="system.bonusToggles.lien1" data-modifier="+1" {{checked system.bonusToggles.lien1}}> +1 Lien</label>
+      <label class="chip"><input type="checkbox" class="bonus-checkbox" name="system.bonusToggles.capaciteSecondaire1" data-modifier="+1" {{checked system.bonusToggles.capaciteSecondaire1}}> +1 Capacité secondaire</label>
+      <label class="chip"><input type="checkbox" class="bonus-checkbox" name="system.bonusToggles.malusMj1" data-modifier="-1" {{checked system.bonusToggles.malusMj1}}> Malus MJ -1</label>
+      <label class="chip"><input type="checkbox" class="bonus-checkbox" name="system.bonusToggles.malusMj2" data-modifier="-2" {{checked system.bonusToggles.malusMj2}}> Malus MJ -2</label>
     </div>
     <div class="bonus-controls">
       <div class="gauge">Malus actuel&nbsp;<span class="penalty-value">0</span></div>
